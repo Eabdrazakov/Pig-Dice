@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+}
+
+.div1 {
+    float: left;
+    margin-left: 200px;
+    padding-top: 100px;
+    margin-right: 100px;
+
+}
+
+.div2 {
+    float: right;
+    margin-right: 200px;
+    padding-top: 100px;
+    margin-left: 100px;
+
+}
+
+/* .hidden {
+    display: none;
+} */

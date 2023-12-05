@@ -12,17 +12,25 @@
     <h1>Pig Dice Game!</h1>
 
     <div class="gameUserForm">
-        <form id="pigdiceUserForm">
-            <label for="pigDicePlayer1">player one, enter your name:</label>
-            <input id="pigDicePlayer1" type="text" name="pigDicePlayer1">
-
-            <label for="pigDicePlayer2">player two, enter your name:</label>
-            <input id="pigDicePlayer2" type="text" name="pigDicePlayer2">
-
-            <button type="submit">clicky</button>
+        <h2>click the button to start a new game!</h2>
+        <button type="submit">clicky</button>
         </form>
     </div>
 
+    <div class="hidden">
+        <div class="div1">
+            <h3>Player one is: <span id="Name1"></span></h3>
+            <p>You rolled a <span id="roll1"></span>!</p>
+            <p>Your total score is <span id="score1"></span>!</p>
+            <button type="button" id="button1">Roll</button>
+        </div>
+        <div class="div2">
+            <h3>Player two is: <span id="Name2"></span></h3>
+            <p>You rolled a <span id="roll2"></span>!</p>
+            <p>Your total score is <span id="score2"></span>!</p>
+            <button type="button" id="button2">Roll</button>
+        </div>
+    </div>
 </body>
 
 </html>

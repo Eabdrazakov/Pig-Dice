@@ -1,7 +1,7 @@
 // Business logic
 
 function diceNumberRandomizer() {
-    return Math.floor(Math.random() * 6);
+    return Math.floor(Math.random() * 6) + 1;
 }
 // console.log(diceNumberRandomizer(6));
 
@@ -13,7 +13,7 @@ function diceRollContainer() {
 
     return resultContainer;
 }
-// const result = diceRollContainer();
+const result = diceRollContainer();
 // console.log(result);
 
 function totalScoreCounter(totalScore, currentScore) {
@@ -29,8 +29,12 @@ function totalScoreCounter(totalScore, currentScore) {
 
 // UI logic
 document.addEventListener("DOMContentLoaded", () => {
+
     const pigDiceUserForm = document.getElementById("pigdiceUserForm");
+    let myGame = null;
     pigDiceUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
+
+
     })
 });
