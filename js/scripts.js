@@ -4,37 +4,25 @@ function diceNumberRandomizer() {
     return Math.floor(Math.random() * 6) + 1;
 }
 // console.log(diceNumberRandomizer(6));
-
-function diceRollContainer() {
-    const resultContainer = [];
-
-    const randomNumber = diceNumberRandomizer();
-    resultContainer.push(randomNumber);
-
-    return resultContainer;
+function Player(name, score) {
+    this.name = name;
+    this.score = score;
 }
-const result = diceRollContainer();
-// console.log(result);
-
-function totalScoreCounter(totalScore, currentScore) {
-    if (diceNumberRandomizer(1)) {
-        return totalScore; 0;
-    } else {
-        return currentScore + diceNumberRandomizer;
-    }
-}
-
-// console.log(totalScoreCounter(6, 5))
 
 
 // UI logic
 document.addEventListener("DOMContentLoaded", () => {
 
-    const pigDiceUserForm = document.getElementById("pigdiceUserForm");
+    const pigDiceUserForm = document.getElementById("gameUserForm");
     let myGame = null;
     pigDiceUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
+        const Player1 = new Player("Lily", 0);
+        const Player2 = new Player("Ermek", 0);
 
+
+        document.getElementById("Name1").innerText = Player1.name;
+        document.getElementById("Name2").innerText = Player2.name;
     })
 });
