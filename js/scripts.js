@@ -24,5 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.getElementById("Name1").innerText = Player1.name;
         document.getElementById("Name2").innerText = Player2.name;
+
+        const button1 = document.getElementById("button1");
+        const button2 = document.getElementById("button2");
+
+        button1.addEventListener("click", () => {
+            document.getElementById("roll1").innerText = diceNumberRandomizer();
+        });
+
+        button2.addEventListener("click", () => {
+            document.getElementById("roll2").innerText = diceNumberRandomizer();
+        });
     })
 });
