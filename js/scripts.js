@@ -9,14 +9,15 @@ function Player(player, score) {
     this.score = score;
 
     this.currentRound = [];
-    this.totalScore = [];
+    // this.totalScore = [];
 }
 
 Player.prototype.round = function (num) {
     if (num === 1) {
-        this.currentRoundround = [];
+        this.currentRound = [];
     } else {
         this.currentRound.push(num);
+        this.score += num;
     }
     return this.currentRound;
 };
@@ -24,15 +25,21 @@ Player.prototype.round = function (num) {
 // console.log(result.round(2));
 // console.log(result.round(1));
 
-Player.prototype.total = function (num) {
-    if (num !== 1) {
-        this.totalScore.push(num);
-    }
-    return this.totalScore;
-};
-let result = new Player("ermek", 0);
-console.log(result.total(1))
-console.log(result.total(3))
+
+Player.prototype.calculateScore = function () {
+    const numScore = this.currentRound;
+    return numScore.reduce((a, b) => a + b, 0);
+}
+// Player.prototype.total = function (num) {
+//     if (num !== 1) {
+//         this.totalScore.push(num);
+//     }
+//     return this.totalScore;
+// };
+// let result = new Player("ermek", 0);
+// result.round(3);
+// result.round(9);
+// console.log(result.calculateScore());
 
 
 
@@ -44,7 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         const Player1 = new Player("Lily", 0);
-        const Player2 = new Player("Ermek", 0);
+        const Player2 = new Player("Bek", 0);
+
 
 
         document.getElementById("Name1").innerText = Player1.player;
@@ -54,14 +62,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const button2 = document.getElementById("button2");
 
         button1.addEventListener("click", () => {
-            document.getElementById("roll1").innerText = diceNumberRandomizer();
             const rollValue = diceNumberRandomizer();
-            Player1.score += rollValue;
-            document.getElementById("score1").innerText = Player1.score;
+            document.getElementById("roll1").innerText = rollValue;
+            Player1.round(rollValue);
+            document.getElementById('score1').innerText = Player1.score;
+            // Player1.score += diceNumberRandomizer();
+            // document.getElementById("score1").innerText = Player1.score;
+            //const randomNumber = diceNumberRandomizer();
+            //Player1.score = randomNumber;
+            //Player1.round(randomNumber);
+            //document.getElementById("score1").innerText = Player1.calculateScore();
         });
 
+
         button2.addEventListener("click", () => {
-            document.getElementById("roll2").innerText = diceNumberRandomizer();
+            const rollValue2 = diceNumberRandomizer();
+            document.getElementById("roll2").innerText = rollValue2;
+            Player2.round(rollValue2);
+            document.getElementById('score2').innerText = Player2.score;
         });
+
+
+        // Player1.round(diceNumberRandomizer());
+        // document.getElementById("score1").innerText = Player1.calculateScore();
     })
 });
