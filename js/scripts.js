@@ -3,13 +3,12 @@
 function diceNumberRandomizer() {
     return Math.floor(Math.random() * 6) + 1;
 }
-// console.log(diceNumberRandomizer(6));
+
 function Player(player, score) {
     this.player = player;
     this.score = score;
 
     this.currentRound = [];
-    // this.totalScore = [];
 }
 
 Player.prototype.round = function (num) {
@@ -22,25 +21,6 @@ Player.prototype.round = function (num) {
     }
     return this.currentRound;
 };
-// let result = new Player("Lily", 0);
-// console.log(result.round(2));
-// console.log(result.round(1));
-
-
-// Player.prototype.calculateScore = function () {
-//     const numScore = this.currentRound;
-//     return numScore.reduce((a, b) => a + b, 0);
-// }
-// Player.prototype.total = function (num) {
-//     if (num !== 1) {
-//         this.totalScore.push(num);
-//     }
-//     return this.totalScore;
-// };
-// let result = new Player("ermek", 0);
-// result.round(3);
-// result.round(9);
-// console.log(result.calculateScore());
 
 
 
@@ -76,12 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             document.getElementById("border1").setAttribute("class", "hidden");
             document.getElementById("border2").removeAttribute("class", "hidden");
-            // Player1.score += diceNumberRandomizer();
-            // document.getElementById("score1").innerText = Player1.score;
-            //const randomNumber = diceNumberRandomizer();
-            //Player1.score = randomNumber;
-            //Player1.round(randomNumber);
-            //document.getElementById("score1").innerText = Player1.calculateScore();
+
         });
 
 
@@ -103,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        // Player1.round(diceNumberRandomizer());
-        // document.getElementById("score1").innerText = Player1.calculateScore();
+
     })
 });
