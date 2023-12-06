@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const Player2 = new Player("Bek", 0);
 
 
-
         document.getElementById("Name1").innerText = Player1.player;
         document.getElementById("Name2").innerText = Player2.player;
 
@@ -58,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-
         button2.addEventListener("click", () => {
             const rollValue2 = diceNumberRandomizer();
             document.getElementById("roll2").innerText = rollValue2;
@@ -70,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (score2 >= 25) {
                 alert(`${Player2.player} wins!`);
             }
-
 
             document.getElementById("border2").setAttribute("class", "hidden");
             document.getElementById("border1").removeAttribute("class", "hidden");
