@@ -8,7 +8,8 @@ function Player(player, score) {
     this.player = player;
     this.score = score;
 
-    this.currentRound = []
+    this.currentRound = [];
+    this.totalScore = [];
 }
 
 Player.prototype.round = function (num) {
@@ -22,6 +23,17 @@ Player.prototype.round = function (num) {
 // let result = new Player("Lily", 0);
 // console.log(result.round(2));
 // console.log(result.round(1));
+
+Player.prototype.total = function (num) {
+    if (num !== 1) {
+        this.totalScore.push(num);
+    }
+    return this.totalScore;
+};
+let result = new Player("ermek", 0);
+console.log(result.total(1))
+console.log(result.total(3))
+
 
 
 // UI logic
