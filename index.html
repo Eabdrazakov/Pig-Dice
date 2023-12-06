@@ -11,19 +11,20 @@
 
     <h1>Pig Dice Game!</h1>
 
-    <div class="gameUserForm">
-        <h2>click the button to start a new game!</h2>
+    <form id="gameUserForm">
+        <h2>click the button to start your game!</h2>
         <button type="submit">clicky</button>
-        </form>
-    </div>
+    </form>
 
-    <div class="hidden">
+    <div class="hidden" id="border1">
         <div class="div1">
             <h3>Player one is: <span id="Name1"></span></h3>
             <p>You rolled a <span id="roll1"></span>!</p>
             <p>Your total score is <span id="score1"></span>!</p>
             <button type="button" id="button1">Roll</button>
         </div>
+    </div>
+    <div class="hidden" id="border2">
         <div class="div2">
             <h3>Player two is: <span id="Name2"></span></h3>
             <p>You rolled a <span id="roll2"></span>!</p>
@@ -31,6 +32,17 @@
             <button type="button" id="button2">Roll</button>
         </div>
     </div>
+    <div class="container">
+        <div class="totalScore">
+            <p>Player one total score: <span id="total1"></span></p>
+            <p>Player two total score: <span id="total2"></span></p>
+        </div>
+    </div>
+
+    <div id="resetButton">
+        <input type="reset" value="New Game" onClick="window.location.reload();">
+    </div>
+
 </body>
 
 </html>

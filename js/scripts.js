@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('score1').innerText = score;
             document.getElementById("total1").innerText = score;
 
-            if (score >= 5) {
+            if (score >= 25) {
                 alert(`${Player1.player} wins!`);
             }
 
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('score2').innerText = score2;
             document.getElementById("total2").innerText = score2;
 
-            if (score2 >= 5) {
+            if (score2 >= 25) {
                 alert(`${Player2.player} wins!`);
             }
 
