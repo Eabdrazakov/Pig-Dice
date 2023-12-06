@@ -14,6 +14,7 @@ function Player(player, score) {
 
 Player.prototype.round = function (num) {
     if (num === 1) {
+        this.score = 0;
         this.currentRound = [];
     } else {
         this.currentRound.push(num);
@@ -26,10 +27,10 @@ Player.prototype.round = function (num) {
 // console.log(result.round(1));
 
 
-Player.prototype.calculateScore = function () {
-    const numScore = this.currentRound;
-    return numScore.reduce((a, b) => a + b, 0);
-}
+// Player.prototype.calculateScore = function () {
+//     const numScore = this.currentRound;
+//     return numScore.reduce((a, b) => a + b, 0);
+// }
 // Player.prototype.total = function (num) {
 //     if (num !== 1) {
 //         this.totalScore.push(num);
