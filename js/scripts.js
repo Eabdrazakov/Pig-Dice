@@ -23,7 +23,6 @@ Player.prototype.round = function (num) {
 };
 
 
-
 // UI logic
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -76,8 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("border2").setAttribute("class", "hidden");
             document.getElementById("border1").removeAttribute("class", "hidden");
         });
-
-
 
     })
 });
