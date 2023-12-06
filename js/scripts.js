@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pigDiceUserForm = document.getElementById("gameUserForm");
     pigDiceUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
-
+        document.getElementById("border2").removeAttribute("class", "hidden");
         const Player1 = new Player("Lily", 0);
         const Player2 = new Player("Bek", 0);
 
@@ -66,7 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const rollValue = diceNumberRandomizer();
             document.getElementById("roll1").innerText = rollValue;
             Player1.round(rollValue);
-            document.getElementById('score1').innerText = Player1.score;
+            const score = Player1.score
+            document.getElementById('score1').innerText = score;
+            document.getElementById("total1").innerText = score;
+
+            if (score >= 5) {
+                alert(`${Player1.player} wins!`);
+            }
+
+            document.getElementById("border1").setAttribute("class", "hidden");
+            document.getElementById("border2").removeAttribute("class", "hidden");
             // Player1.score += diceNumberRandomizer();
             // document.getElementById("score1").innerText = Player1.score;
             //const randomNumber = diceNumberRandomizer();
@@ -80,7 +89,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const rollValue2 = diceNumberRandomizer();
             document.getElementById("roll2").innerText = rollValue2;
             Player2.round(rollValue2);
-            document.getElementById('score2').innerText = Player2.score;
+            const score2 = Player2.score
+            document.getElementById('score2').innerText = score2;
+            document.getElementById("total2").innerText = score2;
+
+            if (score2 >= 5) {
+                alert(`${Player2.player} wins!`);
+            }
+
+
+            document.getElementById("border2").setAttribute("class", "hidden");
+            document.getElementById("border1").removeAttribute("class", "hidden");
         });
 
 
