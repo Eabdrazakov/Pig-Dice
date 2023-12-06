@@ -23,6 +23,7 @@ Player.prototype.round = function (num) {
 };
 
 
+
 // UI logic
 document.addEventListener("DOMContentLoaded", () => {
 
