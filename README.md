@@ -1,3 +1,6 @@
+
+_Open [gh-page site](https://eabdrazakov.github.io/Pig-Dice/)_
+
 ```
 Descride: diceNumberRandomizer();
 
