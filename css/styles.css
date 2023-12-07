@@ -1,6 +1,8 @@
 body {
     text-align: center;
+    background-color: aliceblue;
 }
+
 
 .div1 {
     float: left;
@@ -24,7 +26,7 @@ body {
 }
 
 #border2 .div2 {
-    border: 5px solid red;
+    border: 5px solid khaki;
     padding: 10px;
 }
 
@@ -33,14 +35,88 @@ body {
     display: none;
 }
 
-.totalScore {
+body .totalScore {
     margin-top: auto;
     margin-right: 20px;
     margin-left: 10px;
-    padding: 200px;
+    padding: 250px;
+
 }
 
-#resetButton {
-    margin-top: -200px;
-    padding-top: 10px;
+body #resetButton {
+    margin-top: -250px;
+    padding-top: 5px;
+
+}
+
+
+#namePlayers {
+    padding: 20px;
+}
+
+#nameFirst {
+    margin-bottom: 10px;
+}
+
+#button0 {
+    margin: 15px;
+    margin-top: 10px;
+    background-color: green;
+    height: 30px;
+    width: 150px
+}
+
+#Clicky {
+    margin-top: 10px;
+    background-color: oldlace;
+    height: 30px;
+    width: 150px
+}
+
+#button1 {
+    margin: 15px;
+    margin-top: 10px;
+    background-color: red;
+    height: 30px;
+    width: 150px
+}
+
+#button2 {
+    margin: 15px;
+    margin-top: 10px;
+    background-color: khaki;
+    height: 30px;
+    width: 150px
+}
+
+#resetButton00 {
+    margin: 15px;
+    margin-top: 10px;
+    background-color: darkgoldenrod;
+    height: 30px;
+    width: 150px
+}
+
+#button11 {
+    margin: 15px;
+    margin-top: 10px;
+    background-color: khaki;
+    height: 30px;
+    width: 150px
+}
+
+#button22 {
+    margin: 15px;
+    margin-top: 10px;
+    background-color: red;
+    height: 30px;
+    width: 150px
+}
+
+#starter {
+    margin: 15px;
+    margin-top: 10px;
+    background-color: darkturquoise;
+    height: 30px;
+    width: 150px
 }

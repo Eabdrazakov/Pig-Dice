@@ -12,8 +12,18 @@
     <h1>Pig Dice Game!</h1>
 
     <form id="gameUserForm">
-        <h2>click the button to start your game!</h2>
-        <button type="submit">clicky</button>
+        <h2>Click the button to start your game!</h2>
+        <button type="submit" id="Clicky">Clicky</button>
+    </form>
+
+    <form id="namePlayers" class="hidden">
+        <label for="firstName">First player name:</label>
+        <input type="text" id="nameFirst">
+        <br>
+        <label for="firstName">Second player name:</label>
+        <input type="text" id="nameSecond">
+        <br>
+        <button type="submit" id="button0">Start Game!</button>
     </form>
 
     <div class="hidden" id="border1">
@@ -21,7 +31,11 @@
             <h3>Player one is: <span id="Name1"></span></h3>
             <p>You rolled a <span id="roll1"></span>!</p>
             <p>Your total score is <span id="score1"></span>!</p>
-            <button type="button" id="button1">Roll</button>
+            <button type="button" id="button1">
+                <strong>Roll</strong>
+            </button>
+            <br>
+            <button type="button" id="button11" class="hidden">Turn2</button>
         </div>
     </div>
     <div class="hidden" id="border2">
@@ -29,18 +43,26 @@
             <h3>Player two is: <span id="Name2"></span></h3>
             <p>You rolled a <span id="roll2"></span>!</p>
             <p>Your total score is <span id="score2"></span>!</p>
-            <button type="button" id="button2">Roll</button>
+            <button type="button" id="button2">
+                <strong>Roll</strong>
+            </button>
+            <br>
+            <button type="button" id="button22" class="hidden">Turn1</button>
         </div>
     </div>
-    <div class="container">
+    <div id="starter1">
+        <button type="button" id="starter" class="hidden">Start Game!</button>
+    </div>
+    <div class="hidden" id="total">
         <div class="totalScore">
-            <p>Player one total score: <span id="total1"></span></p>
-            <p>Player two total score: <span id="total2"></span></p>
+            <p class="p" class="hidden"><span id="giveName1"></span> total score: <span id="total1"></span></p>
+            <p class="m" class="hidden"><span id="giveName2"></span> total score: <span id="total2"></span></p>
         </div>
-    </div>
 
-    <div id="resetButton">
-        <input type="reset" value="New Game" onClick="window.location.reload();">
+
+        <div id="resetButton">
+            <input type="reset" id="resetButton00" value="New Game" onClick="window.location.reload();">
+        </div>
     </div>
 
 </body>
